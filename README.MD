@@ -1,7 +1,7 @@
 # Saper
 
 ## Introduction
-In 2011, I was in the second grade of high school and I created two games for subject *Structure and object programming* (Polish: *Programowanie strukturalne i obiektowe*): [Deska](https://gitlab.com/adam-zielonka-pro/pascal-games/deska) and [Saper](https://gitlab.com/adam-zielonka-pro/pascal-games/saper). In these lessons, we learned to program using the Pascal language.
+In 2011, I was in the second grade of high school and I created two games for subject *Structure and object programming* (Polish: *Programowanie strukturalne i obiektowe*): [Deska](https://gitlab.com/adam-zielonka-pro/deska) and [Saper](https://gitlab.com/adam-zielonka-pro/saper). In these lessons, we learned to program using the Pascal language.
 
 ## About this game
 This game was created in May 2011. The rules is simlar to game called *Minesweeper* (Polish: *Saper*) from Windows system.
