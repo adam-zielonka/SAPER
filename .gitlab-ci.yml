@@ -1,10 +1,15 @@
 pages:
-  image: alpine:latest
+  image: 
+    name: registry.gitlab.com/adam-zielonka-pro/dos-pascal-docker
+    entrypoint: [""]
   script:
+    - /docker-entrypoint.sh SAPER.PAS
     - echo '😃'
+    - mv build public
   artifacts:
     expire_in: 1 week
     paths:
     - public
   only:
     - master
+  
