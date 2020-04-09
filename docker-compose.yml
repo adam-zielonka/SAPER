@@ -6,4 +6,4 @@ services:
     working_dir: /project
     volumes:
       - ./:/project
-    command: ['SAPER.PAS']
+    command: ['src/SAPER.PAS']
