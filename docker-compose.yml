@@ -1,9 +1,8 @@
 version: '3.7'
 services:
 
-  app:
+  game:
     image: registry.gitlab.com/adam-zielonka-pro/dos-pascal-docker
     working_dir: /project
-    volumes:
-      - ./:/project
-    command: ['src/SAPER.PAS']
+    volumes: [ ./:/project ]
+    command: [ src/SAPER.PAS]

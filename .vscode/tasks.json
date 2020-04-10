@@ -1,0 +1,65 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "command": "docker-compose",
+      "args": ["up"],
+      "problemMatcher": {
+        "owner": "pascal",
+        "fileLocation": ["relative", "${workspaceFolder}/src"],
+        "pattern": [
+          {
+            "regexp": "(.*)\\((.*)\\): (([^ ]*) .*)",
+            "file": 1,
+            "line": 2,
+            "message": 3,
+            "severity": 4
+          },
+          {
+            "regexp": "|\\s(.*)",
+            "code": 1
+          }
+        ]
+      }
+    },
+    {
+      "label": "watch",
+      "isBackground": true,
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-it",
+        "-w=/project",
+        "-v",
+        "${workspaceRoot}:/project",
+        "registry.gitlab.com/adam-zielonka-pro/dos-pascal-docker:latest",
+        "src/SAPER.PAS",
+        "--watch"
+      ],
+      "problemMatcher": {
+        "owner": "pascal",
+        "fileLocation": ["relative", "${workspaceFolder}/src"],
+        "pattern": [
+          {
+            "regexp": "(.*)\\((.*)\\): (([^ ]*) .*)",
+            "file": 1,
+            "line": 2,
+            "message": 3,
+            "severity": 4
+          },
+          {
+            "regexp": "(.*)",
+            "code": 1
+          }
+        ],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".*Turbo.*",
+          "endsPattern": ".*Watching.*"
+        }
+      }
+    }
+  ]
+}
