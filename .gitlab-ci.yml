@@ -3,8 +3,7 @@ pages:
     name: registry.gitlab.com/adam-zielonka-pro/dos-pascal-docker
     entrypoint: [""]
   script:
-    - /docker-entrypoint.sh src/SAPER.PAS
-    - echo '😃'
+    - docker-entrypoint.sh src/SAPER.PAS
     - mv build public
   artifacts:
     expire_in: 1 week

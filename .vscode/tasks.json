@@ -35,7 +35,7 @@
         "-v",
         "${workspaceRoot}:/project",
         "registry.gitlab.com/adam-zielonka-pro/dos-pascal-docker:latest",
-        "src/SAPER.PAS",
+        "src/DESKA.PAS",
         "--watch"
       ],
       "problemMatcher": {
@@ -43,7 +43,7 @@
         "fileLocation": ["relative", "${workspaceFolder}/src"],
         "pattern": [
           {
-            "regexp": "(.*)\\((.*)\\): (([^ ]*) .*)",
+            "regexp": "([^()]*)\\((\\d*)\\): (([^ ]*) .*)",
             "file": 1,
             "line": 2,
             "message": 3,
