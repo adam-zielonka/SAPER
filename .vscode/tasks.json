@@ -35,7 +35,7 @@
         "-v",
         "${workspaceRoot}:/project",
         "registry.gitlab.com/adam-zielonka-pro/dos-pascal-docker:latest",
-        "src/DESKA.PAS",
+        "src/SAPER.PAS",
         "--watch"
       ],
       "problemMatcher": {
