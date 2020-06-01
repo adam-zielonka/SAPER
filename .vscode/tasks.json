@@ -3,6 +3,7 @@
   "tasks": [
     {
       "label": "build",
+      "isBackground": true,
       "command": "docker-compose",
       "args": ["up"],
       "problemMatcher": {
@@ -18,39 +19,6 @@
           },
           {
             "regexp": "|\\s(.*)",
-            "code": 1
-          }
-        ]
-      }
-    },
-    {
-      "label": "watch",
-      "isBackground": true,
-      "command": "docker",
-      "args": [
-        "run",
-        "--rm",
-        "-it",
-        "-w=/project",
-        "-v",
-        "${workspaceRoot}:/project",
-        "registry.gitlab.com/adam-zielonka-pro/dos-pascal-docker:latest",
-        "src/SAPER.PAS",
-        "--watch"
-      ],
-      "problemMatcher": {
-        "owner": "pascal",
-        "fileLocation": ["relative", "${workspaceFolder}/src"],
-        "pattern": [
-          {
-            "regexp": "([^()]*)\\((\\d*)\\): (([^ ]*) .*)",
-            "file": 1,
-            "line": 2,
-            "message": 3,
-            "severity": 4
-          },
-          {
-            "regexp": "(.*)",
             "code": 1
           }
         ],
