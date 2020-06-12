@@ -18,8 +18,12 @@
             "severity": 4
           },
           {
-            "regexp": "|\\s(.*)",
-            "code": 1
+            "regexp": "(\\|(.*))",
+            "message": 1,
+          },
+          {
+            "regexp": "(\\|(.*))",
+            "message": 1,
           }
         ],
         "background": {
