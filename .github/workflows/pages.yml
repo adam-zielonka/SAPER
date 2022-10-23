@@ -39,7 +39,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build
-        uses: adam-zielonka/dos-pascal-docker@e599d394c5fbac94e270949e009b72a290600cb9
+        uses: adam-zielonka/dos-pascal-docker@902437137cfc69d6e17f096bfb28e5de62097df1
         with:
           path: src/SAPER.PAS
       - name: Upload artifact
